@@ -35,7 +35,7 @@ public class MusicAlbum {
         return numberOfDownloads;
     }
 
-    public long incrementDownload(){
+    public long incrementDownload() {
         return ++numberOfDownloads;
     }
 }

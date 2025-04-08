@@ -1,5 +1,6 @@
 package org.example.musicalbum;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -40,6 +41,9 @@ public class Controller implements Initializable {
     @FXML
     private Label labelNumber;
 
+    @FXML
+    private Button buttonClose;
+
     Image prev = new Image(String.valueOf(getClass().getResource("/res/obraz3.png")));
     Image next = new Image(String.valueOf(getClass().getResource("/res/obraz2.png")));
     List<MusicAlbum> albums;
@@ -55,15 +59,16 @@ public class Controller implements Initializable {
         buttonRight.setGraphic(imgRight);
         MusicAlbumReader.readAlbumFromFile();
         albums = MusicAlbumReader.albums;
-//        for(MusicAlbum album : albums) System.out.println(album);
         getAlbum(0);
 
         buttonLeft.setOnAction(actionEvent -> {
-            if (currentIndex == 0) currentIndex = albums.size()-1;
-            else currentIndex --;
+            if (currentIndex == 0) currentIndex = albums.size() - 1;
+            else currentIndex--;
             getAlbum(currentIndex);
 
         });
+
+        buttonClose.setOnAction(actionEvent -> Platform.exit());
 
         buttonRight.setOnAction(actionEvent -> {
             currentIndex = (currentIndex + 1) % albums.size();
@@ -81,7 +86,7 @@ public class Controller implements Initializable {
     // Parametry: int index - żądany do wyświetlania index albumu
     //==================================================================================================
 
-    private void getAlbum(int index){
+    private void getAlbum(int index) {
         labelAuthor.setText(albums.get(index).getArtist());
         labelTitle.setText(albums.get(index).getAlbum());
         labelNumberOfSongs.setText(albums.get(index).getRecords() + " utworów");

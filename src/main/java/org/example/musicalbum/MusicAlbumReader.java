@@ -8,14 +8,14 @@ import java.util.List;
 public class MusicAlbumReader {
     static List<MusicAlbum> albums = new ArrayList<>();
 
-    public static void readAlbumFromFile(){
-        try(BufferedReader bReader = new BufferedReader(new FileReader("src/main/resources/res//Data.txt"))){
+    public static void readAlbumFromFile() {
+        try (BufferedReader bReader = new BufferedReader(new FileReader("src/main/resources/res//Data.txt"))) {
             String line;
-            String artist,title;
-            int records,year;
+            String artist, title;
+            int records, year;
             long downloads;
             MusicAlbum album;
-            while((line = bReader.readLine()) !=null){
+            while ((line = bReader.readLine()) != null) {
                 artist = line;
                 title = bReader.readLine();
                 records = Integer.parseInt(bReader.readLine());
