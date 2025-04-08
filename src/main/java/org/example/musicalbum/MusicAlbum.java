@@ -35,14 +35,7 @@ public class MusicAlbum {
         return numberOfDownloads;
     }
 
-    @Override
-    public String toString() {
-        return "MusicAlbum{" +
-                "artist='" + artist + '\'' +
-                ", album='" + album + '\'' +
-                ", records=" + records +
-                ", year=" + year +
-                ", numberOfDownloads=" + numberOfDownloads +
-                '}';
+    public long incrementDownload(){
+        return ++numberOfDownloads;
     }
 }

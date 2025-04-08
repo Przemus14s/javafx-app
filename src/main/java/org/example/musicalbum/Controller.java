@@ -67,9 +67,19 @@ public class Controller implements Initializable {
 
         buttonRight.setOnAction(actionEvent -> {
             currentIndex = (currentIndex + 1) % albums.size();
+            getAlbum((currentIndex));
+        });
+        buttonDownload.setOnAction(actionEvent -> {
+            labelNumber.setText(String.valueOf(albums.get(currentIndex).incrementDownload()));
         });
 
     }
+
+    //==================================================================================================
+    // Nazwa metody: getAlbum()
+    // Opis metod: metoda ustawia aktualne pola w widoku dla wskazanego indeksu albumu
+    // Parametry: int index - żądany do wyświetlania index albumu
+    //==================================================================================================
 
     private void getAlbum(int index){
         labelAuthor.setText(albums.get(index).getArtist());

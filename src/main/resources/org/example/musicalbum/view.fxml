@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #2E8B57;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.musicalbum.Controller">
    <children>
       <Button fx:id="buttonLeft" layoutX="22.0" layoutY="115.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="78.0" />
@@ -22,12 +21,12 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="labelAuthor" layoutX="337.0" layoutY="31.0" prefHeight="70.0" prefWidth="179.0" text="Gorillaz" textFill="#f2f2f2">
+      <Label fx:id="labelAuthor" layoutX="316.0" layoutY="31.0" prefHeight="73.0" prefWidth="463.0" text="Gorillaz" textFill="#f2f2f2">
          <font>
-            <Font size="50.0" />
+            <Font size="43.0" />
          </font>
       </Label>
-      <Label fx:id="labelTitle" layoutX="356.0" layoutY="104.0" text="&quot;The Now Now&quot;" textFill="WHITE">
+      <Label fx:id="labelTitle" layoutX="356.0" layoutY="104.0" prefHeight="27.0" prefWidth="244.0" text="&quot;The Now Now&quot;" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
