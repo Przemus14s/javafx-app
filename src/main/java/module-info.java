@@ -3,6 +3,6 @@ module org.example.musicalbum {
     requires javafx.fxml;
 
 
-    opens org.example.musicalbum to javafx.fxml;
-    exports org.example.musicalbum;
+    opens example.com to javafx.fxml;
+    exports example.com;
 }

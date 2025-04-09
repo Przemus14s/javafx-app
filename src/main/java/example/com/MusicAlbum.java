@@ -1,4 +1,4 @@
-package org.example.musicalbum;
+package example.com;
 
 public class MusicAlbum {
     private String artist;

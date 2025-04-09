@@ -1,4 +1,4 @@
-package org.example.musicalbum;
+package example.com;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -12,7 +12,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class MusicController implements Initializable {
 
     @FXML
     private Button buttonLeft;
@@ -79,12 +79,6 @@ public class Controller implements Initializable {
         });
 
     }
-
-    //==================================================================================================
-    // Nazwa metody: getAlbum()
-    // Opis metod: metoda ustawia aktualne pola w widoku dla wskazanego indeksu albumu
-    // Parametry: int index - żądany do wyświetlania index albumu
-    //==================================================================================================
 
     private void getAlbum(int index) {
         labelAuthor.setText(albums.get(index).getArtist());
